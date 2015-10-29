@@ -13,7 +13,7 @@ restaurants = []
 
 # domain url
 domain = "http://www.ipeen.com.tw"
-url = domain + "/taiwan/channel/F"
+url = domain + "/taipei/channel/F?p=1&id=F&so=cdate&soway=d"
 
 # html content
 html = requests.get(url)

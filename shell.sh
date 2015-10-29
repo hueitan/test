@@ -4,6 +4,9 @@ do
     # master
     git pull origin master
     python scrape.py
+    git add -A
+    git commit -m 'Update data'
+    git push origin master
     # gh-pages
     git checkout gh-pages
     git pull origin gh-pages
