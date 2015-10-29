@@ -2,6 +2,7 @@
 while [ true ]
 do
     # master
+    git checkout master
     git pull origin master
     python scrape.py
     git add -A
@@ -10,7 +11,7 @@ do
 
     # sleep 10
     sleep 10
-    
+
     # gh-pages
     git checkout gh-pages
     git pull origin gh-pages
