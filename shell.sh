@@ -2,6 +2,8 @@
 while [ true ]
 do
     python scrape.py
-    git status
-    sleep 5
+    git add -A
+    git commit -m 'Update data'
+    git push origin master
+    sleep 30
 done
