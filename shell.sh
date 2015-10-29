@@ -7,6 +7,10 @@ do
     git add -A
     git commit -m 'Update data'
     git push origin master
+
+    # sleep 10
+    sleep 10
+    
     # gh-pages
     git checkout gh-pages
     git pull origin gh-pages
