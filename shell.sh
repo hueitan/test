@@ -27,6 +27,6 @@ do
     git commit -m 'Update data'
     git push origin gh-pages
 
-    # sleep 30
-    sleep 30
+    # sleep 300 - 5 minutes
+    sleep 300
 done
