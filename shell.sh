@@ -10,6 +10,7 @@ do
     # gh-pages
     git checkout gh-pages
     git pull origin gh-pages
+    git checkout master -- restaurant.json
     git add restaurant.json
     git commit -m 'Update data'
     git push origin gh-pages
