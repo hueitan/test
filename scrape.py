@@ -22,10 +22,12 @@ html = requests.get(url)
 bsObj = BeautifulSoup(html.text, "html.parser")
 
 # Find All Restaurant
-firstObj = bsObj.findAll("h2",{"class":"cmm_read_title_name"})
+firstObj = bsObj.findAll("div",{"class":"newcmm_cmm_main"})
 for link in firstObj:
-    temp = link.find("a")
-    resObj = {"url": domain + temp["href"], "title": temp.text, "comment_id": temp["href"][9:]}
+    temp = link.find(class_="cmm_read_title_area").find(class_="cmm_read_title_name").find("a")
+    created_time = link.find(class_="cmm_read_time").text
+    img_url = link.find(class_="cmm_read_pic").find("img")["src"]
+    resObj = {"url": domain + temp["href"], "title": temp.text, "comment_id": temp["href"][9:], "created_time": created_time, "img_url": img_url}
     restaurants.append(resObj)
 
 # create a new json to data/
