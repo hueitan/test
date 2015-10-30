@@ -6,10 +6,13 @@ do
     git pull origin master
     # scrape taipei
     python scrape.py taipei
+    sleep 10
     # scrape taichung
     python scrape.py taichung
+    sleep 10
     # scrape kaohsiung
     python scrape.py kaohsiung
+    sleep 10
     # scrape japan
     python scrape.py japan
     git add -A
